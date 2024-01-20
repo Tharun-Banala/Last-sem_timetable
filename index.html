@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <style>
+        .btn1 {
+            padding: 6px 15px
+        }
+
+        /* Style for Drive Links */
+        #drive-links {
+            margin-top: 20px;
+            background-color: #212529; /* Light gray background color */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #drive-links strong {
+            font-weight: bold;
+        }
+
+        #drive-links ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .subject-box {
+    color: white; /* Change to white */
+    text-decoration: none;
+    font-weight: bold;
+}
+#drive-links1 {
+            margin-top: 20px;
+            background-color:  #f8f9fa; /* Light gray background color */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #drive-links1 strong {
+            font-weight: bold;
+        }
+
+        #drive-links1 ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .subject-box1 {
+    color: black; /* Change to white */
+    text-decoration: none;
+    font-weight: bold;
+}
+         footer {
+            margin-top: 20px;
+            background-color: #212529; /* Neutral background color for both light and dark mode */
+            padding: 20px;
+            color: white; /* Text color for dark mode */
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 15px; /* Adjusted margin for better spacing */
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer li {
+            margin: 5px;
+        }
+
+        
+
+        
+        </style>
+</head>
+
+<body onload="changeorder()">
+
+    <div class="container" id="rw">
+        <br>
+        <div align="center"> <button class="btn btn-success" onclick="changeClass()" id="bt">LIGHT MODE</button> </div><br>
+       <div align="center">
+            <p><span class="btn btn1 btn-outline-success lecture">Lecture (Green)</span> |
+                <span class="btn btn1 btn-outline-secondary tutorial">Tutorial (Black)</span> |
+                <span class="btn btn1 btn-outline-danger lab">Lab (Red)</span></p>
+        </div>
+        <table class="table table-dark table" id="myid">
+            <thead>
+                <tr>
+                    <th scope="col">DAY</th>
+                    <th scope="col">
+                        TIMETABLE
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rw">
+                    <th scope="row">MONDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid1">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <th>VENUE</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <TD>10:30-11:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 417</a></td>
+                                    <TD>L31</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>18:30-19:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">HS 422</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                               
+
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr class="rw">
+                    <th scope="row">TUESDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid2">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <TH>VENUE</TH>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div class="move">
+                                   <tr>
+                                    <TD>12:30-13:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 432</a></td>
+                                    <TD>L31</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>14:30-16:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 419</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>17:30-19:30</TD>
+                                    <td><a class="btn btn1 btn-outline-danger">CS 403</a></td>
+                                    <TD>502</TD>
+                                    <td></td>
+                                </tr>
+                                </div>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr class="rw">
+                    <th scope="row">WEDNESDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid3">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <TH>VENUE</TH>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                               <tr>
+                                    <TD>10:30-11:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 417</a></td>
+                                    <TD>L-31</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>17:30-18:30</TD>
+                                    <td><a class="btn btn1 btn-outline-secondary">HS 422</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <TD>18:30-19:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">HS 402</a></td>
+                                    <TD>MSH</TD>
+                                    <td></td>
+                                </tr>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr class="rw">
+                    <th scope="row">THURSDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid4">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <TH>VENUE</TH>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <TD>14:30-16:30</TD>
+                                    <td><a class="btn btn1 btn-outline-danger">CS 432</a></td>
+                                    <TD>302</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>18:30-19:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">HS 422</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr class="rw">
+                    <th scope="row">FRIDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid5">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <th>VENUE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <TD>11:30-12:30</TD>
+                                    <td><a class="btn btn1 btn-outline-secondary">CS 417</a></td>
+                                    <TD>L31</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>12:30-13:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 432</a></td>
+                                    <TD>L31</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>16:30-17:30</TD>
+                                    <td><a class="btn btn1 btn-outline-secondary">CS 419</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <TD>17:30-19:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">CS 403</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                </tr>
+                
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                 <tr class="rw">
+                    <th scope="row">SATURDAY</th>
+                    <td>
+                        <table class="table table-dark table" id="myid6">
+                            <thead>
+                                <tr>
+                                    <TH>TIMINGS</TH>
+                                    <th>COURSE</th>
+                                    <TH>VENUE</TH>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <TD>10:30-12:30</TD>
+                                    <td><a class="btn btn1 btn-outline-success">HS 402</a></td>
+                                    <TD>KSH</TD>
+                                    <td></td>
+                                </tr>
+                </tr>
+                
+                </tbody>
+                </table>
+                </td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+           
+        
+        <div id="drive-links" align="center" class="box" >
+    <p class="subject-box" id=myid10><strong>DRIVE LINKS:</strong></p>
+    <ul>
+        <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">CS 403</a></li>
+         <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">CS 417</a></li>
+          <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">CS 419</a></li>
+           <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">CS 432</a></li>
+            <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">HS 402</a></li>
+             <li ><a class="btn btn-outline-success" href="drive-link-for-cs403">HS 422</a></li>
+        
+        <!-- Add more subjects with their drive links -->
+    </ul>
+</div>
+<footer class name="footer" id="myid11">
+            <p>Abbreviations for Subjects:</p>
+            <ul>
+                <li>CS 403 - Machine Leaning</li>
+                <li>CS 417 - Cryptography</li>
+                <li>CS 419 - Computer Vision</li>
+                <li>CS 432 - Reinforcement Learning</li>
+                <li>HS 402 - 2Oth Century</li>
+                <li>HS 422 - Economics</li>
+            </ul>
+        </footer>
+    </div>
+    
+
+</body>
+
+<script type="text/javascript">
+    function changeClass() {
+    if (document.getElementById('myid').className === 'table table-dark table') {
+        document.getElementById('myid').className = "table table-light table";
+        document.getElementById('myid1').className = "table table-light table";
+        document.getElementById('myid2').className = "table table-light table";
+        document.getElementById('myid3').className = "table table-light table";
+        document.getElementById('myid4').className = "table table-light table";
+        document.getElementById('myid5').className = "table table-light table";
+        document.getElementById('myid6').className = "table table-light table";
+        // ... (other table changes)
+
+        document.getElementById('drive-links').id = 'drive-links1';
+        document.getElementById('myid10').className = 'subject-box1';
+      
+        document.getElementById('bt').innerHTML = "DARK MODE";
+         document.getElementById('myid11').style.color='black';
+
+        // Change footer background color for light mode
+        document.getElementById('myid11').style.backgroundColor = '#f8f9fa';
+    } else {
+        document.getElementById('myid').className = "table table-dark table";
+        document.getElementById('myid1').className = "table table-dark table";
+        document.getElementById('myid2').className = "table table-dark table";
+        document.getElementById('myid3').className = "table table-dark table";
+        document.getElementById('myid4').className = "table table-dark table";
+        document.getElementById('myid5').className = "table table-dark table";
+        document.getElementById('myid6').className = "table table-dark table";
+        
+        // ... (other table changes)
+
+        document.getElementById('drive-links1').id = 'drive-links';
+        document.getElementById('myid10').className = 'subject-box';
+    
+        document.getElementById('bt').innerHTML = "LIGHT MODE";
+
+        // Change footer background color for dark mode
+        document.getElementById('myid11').style.backgroundColor = '#212529';
+        document.getElementById('myid11').style.color='white';
+    }
+}
+
+
+    function dayNo(y, m, d) {
+        return --m * 31 - (m > 1 ? (1054267675 >> m * 3 - 6 & 7) - (y & 3 || !(y % 25) && y & 15 ? 0 : 1) : 0) + d;
+    }
+
+    function changeorder() {
+        var table = document.getElementById('myid');
+        var x = table.rows;
+        var date = new Date();
+        var day = date.getDay();
+        if (day > 0 && day < 6) {
+            for (var i = 5; i >= day; i--) {
+                x[1].parentNode.insertBefore(x[5], x[1]);
+            }
+        }
+
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        var d = date.getDate();
+        var fixed = 24;
+        var change = --m * 31 - (m > 1 ? (1054267675 >> m * 3 - 6 & 7) - (y & 3 || !(y % 25) && y & 15 ? 0 : 1) : 0) + d;
+        var diff = change - fixed;
+        diff = Math.ceil(diff / 7);
+        
+            if (diff % 2 == 1) {
+                document.getElementById('myrow').style.display = "none";
+            }
+
+    }
+</script>
+
+
+</html>
